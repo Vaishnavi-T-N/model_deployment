@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIMILARITY</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body style="background: rgb(252, 250, 250);">
+  <div class="login">
+   <h1 style="text-align:center">SENTENCE SIMILARITY PREDICTOR</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <label for="text1" colo>text1:  </label>
+      <input type="text" name="text1" placeholder="text1" required="required">
+      <br>
+      <br>
+      <label for="text2">text2:  </label>
+      <input type="text" name="text2" placeholder="text2" required="required">
+      <br>
+      <br>
+      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict Similarity</button>
+    </form>
+    <br>
+    <br>
+    <h2>
+    {{ prediction_text }}
+    </h2>
+  </div>
+</body>
+</html>
+ 
